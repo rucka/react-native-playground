@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import { View, TextInput, Text } from 'react-native';
+import { ScrollView, View, TextInput, Text } from 'react-native';
 import { Hello, Greeting, Bananas, Blink } from './components';
 
 class Greatings extends Component {
   render() {
     if (this.props.names && this.props.names.length > 0) {
       return (
-        <View style={this.props.style}>
-        {this.props.names.map((v, i) => <View key={i}><Greeting name={v} /></View>)}
-        </View>
+        <ScrollView style={this.props.style}>
+          {this.props.names.map((v, i) => <Greeting key={i} name={v} />)}
+        </ScrollView>
       );
     }
     return <Text>no one to say Hi!</Text>
   }
 }
-
 export class App extends Component {
   constructor(props) {
     super(props);
