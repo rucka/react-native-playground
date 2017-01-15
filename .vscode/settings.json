@@ -1,9 +1,0 @@
-{
-  "typescript": {
-    "tsdk": "./node_modules/.bin/tsc"
-  },
-  "react-native-tools": {
-    "showInternalLogs": true,
-    "logLevel": "Trace"
-  }
-}
